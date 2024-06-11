@@ -8,7 +8,7 @@ const shopify = shopifyApp({
     apiSecretKey: process.env.SHOPIFY_API_SECRET,
     scopes: process.env.SHOPIFY_SCOPES.split(","),
     hostScheme: "https",
-    hostName: "robust-killdeer-pleasantly.ngrok-free.app",
+    hostName: "test-sh-qoza.onrender.com",
   },
   auth: {
     path: "/shopify/auth",

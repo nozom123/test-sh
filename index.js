@@ -2,8 +2,6 @@ const express = require("express");
 const { shopifyApp } = require("@shopify/shopify-app-express");
 const { default: axios } = require("axios");
 
-require("dotenv").config();
-
 const shopify = shopifyApp({
   api: {
     apiKey: process.env.SHOPIFY_API_KEY,
@@ -180,5 +178,9 @@ app.post("/shopify/webhook/gpdr", async (req, res) => {
   );
   console.log(req.body);
   res.sendStatus(200);
+});
+
+app.get("/", async (req, res) => {
+  res.send("HELLO WORLD!");
 });
 app.listen(process.env.PORT || 3001, () => console.log("Server started"));

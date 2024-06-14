@@ -1,1 +1,1 @@
-window.alert("thnder script");
+console.log("thnder script");
